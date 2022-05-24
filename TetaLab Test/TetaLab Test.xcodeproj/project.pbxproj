@@ -12,15 +12,23 @@
 		853A7227283C246100B1A97F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853A7226283C246100B1A97F /* Assets.xcassets */; };
 		853A722A283C246100B1A97F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853A7229283C246100B1A97F /* Preview Assets.xcassets */; };
 		853A7231283C281A00B1A97F /* MainListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853A7230283C281A00B1A97F /* MainListCell.swift */; };
+		853A7233283CFBFD00B1A97F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853A7232283CFBFD00B1A97F /* NetworkManager.swift */; };
+		853A7235283CFF5B00B1A97F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853A7234283CFF5B00B1A97F /* DataModel.swift */; };
+		9B4A7E00183878C5DC55CF3C /* Pods_TetaLab_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38D727E68DAD820FB692384 /* Pods_TetaLab_Test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05051263AF808FE50DAF7D63 /* Pods-TetaLab Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TetaLab Test.debug.xcconfig"; path = "Target Support Files/Pods-TetaLab Test/Pods-TetaLab Test.debug.xcconfig"; sourceTree = "<group>"; };
 		853A721F283C245900B1A97F /* TetaLab Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TetaLab Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		853A7222283C245900B1A97F /* TetaLab_TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetaLab_TestApp.swift; sourceTree = "<group>"; };
 		853A7224283C245900B1A97F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		853A7226283C246100B1A97F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		853A7229283C246100B1A97F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		853A7230283C281A00B1A97F /* MainListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListCell.swift; sourceTree = "<group>"; };
+		853A7232283CFBFD00B1A97F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		853A7234283CFF5B00B1A97F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		C38D727E68DAD820FB692384 /* Pods_TetaLab_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TetaLab_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5168517F0D40327A59BEC66 /* Pods-TetaLab Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TetaLab Test.release.xcconfig"; path = "Target Support Files/Pods-TetaLab Test/Pods-TetaLab Test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B4A7E00183878C5DC55CF3C /* Pods_TetaLab_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,9 +46,10 @@
 		853A7216283C245900B1A97F = {
 			isa = PBXGroup;
 			children = (
-				853A7230283C281A00B1A97F /* MainListCell.swift */,
 				853A7221283C245900B1A97F /* TetaLab Test */,
 				853A7220283C245900B1A97F /* Products */,
+				AD4D885FB121C9DD3B0BC768 /* Pods */,
+				A72BC887B1217083AC0D7C03 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +64,9 @@
 		853A7221283C245900B1A97F /* TetaLab Test */ = {
 			isa = PBXGroup;
 			children = (
+				853A7230283C281A00B1A97F /* MainListCell.swift */,
+				853A7232283CFBFD00B1A97F /* NetworkManager.swift */,
+				853A7234283CFF5B00B1A97F /* DataModel.swift */,
 				853A7222283C245900B1A97F /* TetaLab_TestApp.swift */,
 				853A7224283C245900B1A97F /* ContentView.swift */,
 				853A7226283C246100B1A97F /* Assets.xcassets */,
@@ -70,6 +83,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A72BC887B1217083AC0D7C03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C38D727E68DAD820FB692384 /* Pods_TetaLab_Test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD4D885FB121C9DD3B0BC768 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05051263AF808FE50DAF7D63 /* Pods-TetaLab Test.debug.xcconfig */,
+				E5168517F0D40327A59BEC66 /* Pods-TetaLab Test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 853A722D283C246100B1A97F /* Build configuration list for PBXNativeTarget "TetaLab Test" */;
 			buildPhases = (
+				9474A6AEAA2B4AF2DCBEE811 /* [CP] Check Pods Manifest.lock */,
 				853A721B283C245900B1A97F /* Sources */,
 				853A721C283C245900B1A97F /* Frameworks */,
 				853A721D283C245900B1A97F /* Resources */,
+				6443597A67F80174E29EA467 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,11 +167,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6443597A67F80174E29EA467 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TetaLab Test/Pods-TetaLab Test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TetaLab Test/Pods-TetaLab Test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TetaLab Test/Pods-TetaLab Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9474A6AEAA2B4AF2DCBEE811 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TetaLab Test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		853A721B283C245900B1A97F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				853A7235283CFF5B00B1A97F /* DataModel.swift in Sources */,
+				853A7233283CFBFD00B1A97F /* NetworkManager.swift in Sources */,
 				853A7231283C281A00B1A97F /* MainListCell.swift in Sources */,
 				853A7225283C245900B1A97F /* ContentView.swift in Sources */,
 				853A7223283C245900B1A97F /* TetaLab_TestApp.swift in Sources */,
@@ -267,6 +343,7 @@
 		};
 		853A722E283C246100B1A97F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05051263AF808FE50DAF7D63 /* Pods-TetaLab Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -296,6 +373,7 @@
 		};
 		853A722F283C246100B1A97F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5168517F0D40327A59BEC66 /* Pods-TetaLab Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

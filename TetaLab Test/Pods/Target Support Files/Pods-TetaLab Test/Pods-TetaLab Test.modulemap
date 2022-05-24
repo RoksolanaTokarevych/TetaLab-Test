@@ -1,0 +1,6 @@
+framework module Pods_TetaLab_Test {
+  umbrella header "Pods-TetaLab Test-umbrella.h"
+
+  export *
+  module * { export * }
+}
