@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-  @ObservedObject private var viewModel = ViewModel()
+    @ObservedObject private var viewModel = ViewModel()
     
     var body: some View {
         NavigationView {
-            List(viewModel.dataSource, id: \.title) { article in
+            List(viewModel.searchResults, id: \.title) { article in
                 MainListCell(article: article)
-                    .listRowBackground(Color.gray)
+                    .listRowBackground(Color(uiColor: .lightGray))
             }
             .listStyle(.plain)
+            .navigationBarTitle("", displayMode: .inline)
+            .background(Color(uiColor: .lightGray))
             .onAppear {
+                UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = .white
                 viewModel.getNews()
             }
         }
+        .searchable(text: $viewModel.searchText)
     }
 }
 
