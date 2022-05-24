@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct MainListCell: View {
+    @State private var bottomPadding: CGFloat = 10
     @State var article: ArticleModel
-
+    
     var body: some View {
         VStack {
-            Image(systemName: "person")
-                .resizable()
-                .frame(height: 70)
-                .cornerRadius(12)
-                .padding(.top, 10)
-                .padding(.horizontal, 10)
+            if let imageData = article.imageData, let image = UIImage(data: imageData) {
+                Image(uiImage: image)
+                    .resizable()
+                    .frame(height: 70)
+                    .cornerRadius(12)
+                    .padding(.top, 10)
+                    .padding(.horizontal, 10)
+            }
             
             HStack {
                 Circle()
@@ -36,7 +39,7 @@ struct MainListCell: View {
                     .lineLimit(1)
                 if let url = URL(string: article.url) {
                     Link(destination: url) {
-                        Image(systemName: "arrow.right")
+                        Image(systemName: "chevron.forward")
                             .foregroundColor(.gray)
                     }.buttonStyle(BorderlessButtonStyle())
                         .padding(.trailing, 5)
@@ -52,17 +55,22 @@ struct MainListCell: View {
                 Spacer()
             }
             .padding(.horizontal, 30)
+            .padding(.bottom, bottomPadding)
             
-            HStack {
-                Text(article.description ?? "")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                    .lineLimit(1)
-                
-                Spacer()
+            if let description = article.description, !description.isEmpty {
+                HStack {
+                    Text(description)
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                        .lineLimit(1)
+                    
+                    Spacer()
+                }.onAppear {
+                    bottomPadding = CGFloat(0)
+                }
+                .padding(.bottom, 10)
+                .padding(.horizontal, 30)
             }
-            .padding(.bottom, 10)
-            .padding(.horizontal, 30)
         }
         .background(Color.white)
     }

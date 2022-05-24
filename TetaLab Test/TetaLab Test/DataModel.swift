@@ -18,6 +18,7 @@ struct ArticleModel: Decodable {
     var url: String
     var urlToImage: String?
     var publishedAt: String
+    var imageData: Data?
 }
 
 struct SourseModel: Decodable {
