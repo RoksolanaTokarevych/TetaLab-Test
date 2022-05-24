@@ -17,9 +17,9 @@ class ViewModel: ObservableObject {
         } else {
             return dataSource.filter { article in
                 if let description = article.description {
-                    return article.title.lowercased().contains(searchText.lowercased()) || article.source.name.lowercased().contains(searchText.lowercased()) || description.lowercased().contains(searchText.lowercased())
+                    return (article.title + article.source.name).lowercased().contains(searchText.lowercased()) || description.lowercased().contains(searchText.lowercased())
                 } else {
-                    return article.title.lowercased().contains(searchText.lowercased()) || article.source.name.lowercased().contains(searchText.lowercased())
+                    return (article.title + article.source.name).lowercased().contains(searchText.lowercased())
                 }
             }
         }
