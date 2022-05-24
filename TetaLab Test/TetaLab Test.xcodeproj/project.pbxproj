@@ -15,6 +15,7 @@
 		853A7233283CFBFD00B1A97F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853A7232283CFBFD00B1A97F /* NetworkManager.swift */; };
 		853A7235283CFF5B00B1A97F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853A7234283CFF5B00B1A97F /* DataModel.swift */; };
 		853A7239283D07F800B1A97F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853A7238283D07F800B1A97F /* ViewModel.swift */; };
+		853A723B283D212E00B1A97F /* TimeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853A723A283D212E00B1A97F /* TimeAdapter.swift */; };
 		9B4A7E00183878C5DC55CF3C /* Pods_TetaLab_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38D727E68DAD820FB692384 /* Pods_TetaLab_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		853A7232283CFBFD00B1A97F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		853A7234283CFF5B00B1A97F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		853A7238283D07F800B1A97F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		853A723A283D212E00B1A97F /* TimeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAdapter.swift; sourceTree = "<group>"; };
 		C38D727E68DAD820FB692384 /* Pods_TetaLab_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TetaLab_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5168517F0D40327A59BEC66 /* Pods-TetaLab Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TetaLab Test.release.xcconfig"; path = "Target Support Files/Pods-TetaLab Test/Pods-TetaLab Test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +72,7 @@
 				853A7232283CFBFD00B1A97F /* NetworkManager.swift */,
 				853A7224283C245900B1A97F /* ContentView.swift */,
 				853A7234283CFF5B00B1A97F /* DataModel.swift */,
+				853A723A283D212E00B1A97F /* TimeAdapter.swift */,
 				853A7238283D07F800B1A97F /* ViewModel.swift */,
 				853A7226283C246100B1A97F /* Assets.xcassets */,
 				853A7222283C245900B1A97F /* TetaLab_TestApp.swift */,
@@ -221,6 +224,7 @@
 				853A7233283CFBFD00B1A97F /* NetworkManager.swift in Sources */,
 				853A7231283C281A00B1A97F /* MainListCell.swift in Sources */,
 				853A7225283C245900B1A97F /* ContentView.swift in Sources */,
+				853A723B283D212E00B1A97F /* TimeAdapter.swift in Sources */,
 				853A7239283D07F800B1A97F /* ViewModel.swift in Sources */,
 				853A7223283C245900B1A97F /* TetaLab_TestApp.swift in Sources */,
 			);

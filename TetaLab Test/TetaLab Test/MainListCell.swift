@@ -30,7 +30,7 @@ struct MainListCell: View {
                 
                 Spacer()
                 
-                Text(article.publishedAt)
+                Text(TimeAdapter.convertTime(time: article.publishedAt))
                     .font(.headline)
                     .foregroundColor(.gray)
                     .lineLimit(1)
