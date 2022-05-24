@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainListCell: View {
     @State var article: ArticleModel
-    
+
     var body: some View {
         VStack {
             Image(systemName: "person")
@@ -34,11 +34,13 @@ struct MainListCell: View {
                     .font(.headline)
                     .foregroundColor(.gray)
                     .lineLimit(1)
-                Link(destination: URL(string: article.url)!) {
-                    Image(systemName: "arrow.right")
-                        .foregroundColor(.gray)
-                }.buttonStyle(BorderlessButtonStyle())
-                    .padding(.trailing, 5)
+                if let url = URL(string: article.url) {
+                    Link(destination: url) {
+                        Image(systemName: "arrow.right")
+                            .foregroundColor(.gray)
+                    }.buttonStyle(BorderlessButtonStyle())
+                        .padding(.trailing, 5)
+                }
             }
             .padding(.horizontal, 10)
             
