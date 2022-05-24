@@ -8,35 +8,42 @@
 import SwiftUI
 
 struct MainListCell: View {
+    @State var article: ArticleModel
+    
     var body: some View {
         VStack {
             Image(systemName: "person")
                 .resizable()
-                .frame(width: UIScreen.main.bounds.width - 20, height: 70, alignment: .center)
+                .frame(height: 70)
                 .cornerRadius(12)
-
+                .padding(.top, 10)
+                .padding(.horizontal, 10)
+            
             HStack {
                 Circle()
                     .frame(width: 24, height: 24, alignment: .center)
                     .foregroundColor(.blue)
-                Text("AZsdxfcgvhbjknlmp;[o0i9awds")
+                Text(article.title)
                     .font(.title2)
                     .padding(.horizontal, 5)
                     .lineLimit(1)
                 
                 Spacer()
                 
-                Text("NZG")
+                Text(article.publishedAt)
                     .font(.headline)
                     .foregroundColor(.gray)
                     .lineLimit(1)
-                Link(destination: URL(string: "https://www.apple.com")!) {
+                Link(destination: URL(string: article.url)!) {
                     Image(systemName: "arrow.right")
-                }.padding(.trailing, 5)
+                        .foregroundColor(.gray)
+                }.buttonStyle(BorderlessButtonStyle())
+                    .padding(.trailing, 5)
             }
+            .padding(.horizontal, 10)
             
             HStack {
-                Text("ZMV")
+                Text(article.source.name)
                     .font(.subheadline)
                     .lineLimit(1)
                 
@@ -45,20 +52,22 @@ struct MainListCell: View {
             .padding(.horizontal, 30)
             
             HStack {
-                Text("YNNZ")
+                Text(article.description ?? "")
                     .font(.subheadline)
                     .foregroundColor(.gray)
                     .lineLimit(1)
                 
                 Spacer()
             }
+            .padding(.bottom, 10)
             .padding(.horizontal, 30)
-        }.padding(.all, 10)
+        }
+        .background(Color.white)
     }
 }
 
 struct MainListCell_Previews: PreviewProvider {
     static var previews: some View {
-        MainListCell()
+        MainListCell(article: ArticleModel(source: SourseModel(name: "qwe"), title: "sdf", description: "nm", url: "fcg", urlToImage: "cv", publishedAt: "poiuy"))
     }
 }

@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+  @ObservedObject private var viewModel = ViewModel()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List(viewModel.dataSource, id: \.title) { article in
+                MainListCell(article: article)
+                    .listRowBackground(Color.gray)
+            }
+            .listStyle(.plain)
+            .onAppear {
+                viewModel.getNews()
+            }
+        }
     }
 }
 

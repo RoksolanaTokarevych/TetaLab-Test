@@ -14,9 +14,9 @@ struct DataModel: Decodable {
 struct ArticleModel: Decodable {
     var source: SourseModel
     var title: String
-    var deckription: String
+    var description: String?
     var url: String
-    var urlYoImage: String
+    var urlToImage: String?
     var publishedAt: String
 }
 
