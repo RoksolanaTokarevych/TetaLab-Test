@@ -26,18 +26,25 @@ class ViewModel: ObservableObject {
     }
     
     func getNews() {
-        NetworkManager.shared.getNews { data in            
-            data.articles.forEach { article in
-                var model = ArticleModel(source: article.source, title: article.title, description: article.description, url: article.url, urlToImage: article.urlToImage, publishedAt: article.publishedAt, imageData: nil)
-            
-                if let str = article.urlToImage, let url = URL(string: str) {
-                    model.imageData = try? Data(contentsOf: url)
+        DispatchQueue.main.async {
+            NetworkManager.shared.getNews { data in
+                let queue = DispatchQueue(label: "ImagesQueue", qos: .userInteractive, attributes: .concurrent)
+                queue.async {
+                    data.articles.forEach { article in
+                        var model = ArticleModel(source: article.source, title: article.title, description: article.description, url: article.url, urlToImage: article.urlToImage, publishedAt: article.publishedAt, imageData: nil)
+                        
+                        if let str = article.urlToImage, let url = URL(string: str) {
+                            model.imageData = try? Data(contentsOf: url)
+                        }
+                        
+                        DispatchQueue.main.async {
+                            self.dataSource.append(model)
+                        }
+                    }
                 }
-                
-                self.dataSource.append(model)
+            } error: {
+                self.dataSource = []
             }
-        } error: {
-            self.dataSource = []
         }
     }
 }
