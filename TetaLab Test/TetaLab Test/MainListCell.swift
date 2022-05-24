@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainListCell: View {
+    @State private var topPadding: CGFloat = 10
     @State private var bottomPadding: CGFloat = 10
     @State var article: ArticleModel
     
@@ -20,6 +21,9 @@ struct MainListCell: View {
                     .cornerRadius(12)
                     .padding(.top, 10)
                     .padding(.horizontal, 10)
+                    .onAppear {
+                        topPadding = CGFloat(0)
+                    }
             }
             
             HStack {
@@ -45,6 +49,7 @@ struct MainListCell: View {
                         .padding(.trailing, 5)
                 }
             }
+            .padding(.top, topPadding)
             .padding(.horizontal, 10)
             
             HStack {
